@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개별 섹션 확대 애니메이션</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    section {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.5s;
+    }
+
+    #section1 {
+      background-color: #e6f7ff;
+    }
+
+    #section2 {
+      background-color: #fff0f5;
+    }
+
+    #section3 {
+      background-color: #f0fff0;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1); /* 부드럽고 자연스럽게 */
+        transform: scale(1);
+    }
+
+    .active {
+        transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+
+  <section id="section1">
+    <img src="./images/sea.png" alt="첫 번째 이미지" />
+  </section>
+  <section id="section2">
+    <img src="./images/sea.png" alt="두 번째 이미지" />
+  </section>
+  <section id="section3">
+    <img src="./images/sea.png" alt="세 번째 이미지" />
+  </section>
+
+  <script>
+    window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const img = section.querySelector("img");
+
+        // 섹션의 중앙 위치, 100,99,98...-50,-51...
+        const sectionMiddle = rect.top + rect.height / 2;
+
+        // 뷰포트의 중앙 위치(절대값), ex 150
+        const viewportMiddle = window.innerHeight / 2;
+
+        // 기본 확대 조건
+        // 섹션 중앙과 뷰포트 중앙의 차이가 섹션 높이의 절반보다 작으면 확대
+        const shouldZoom = Math.abs(sectionMiddle - viewportMiddle) < rect.height / 2;
+
+        // 스크롤이 최상단이면 첫 섹션은 무조건 축소
+        if (window.scrollY === 0 && section.id === "section1") {
+        img.classList.remove("active");
+        }
+        // 그 외에는 기존 로직 유지
+        else {
+        if (shouldZoom) {
+            img.classList.add("active");
+            
+        } else {
+            img.classList.remove("active");
+            // img.style.scale = 100;
+        }
+        }
+    });
+    });
+  </script>
+
+</body>
+</html>
