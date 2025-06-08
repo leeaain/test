@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png"> -->
+  <meta property="og:image" content="https://blog.kakaocdn.net/dn/bUItRv/btqzb8DY6mJ/YJTcgguwrYl7B1EYfHkFF0/img.jpg">
+  <title>5월 신고 납부기한 통지서</title>
+  <style>
+    body {
+      background-color: #f7f9fa;
+      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif;
+      margin: 0;
+      padding: 30px 16px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 0px 48px 24px 48px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      margin-right: 16px;
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .header-sub {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .info-table tr {
+      border: none;
+      border-top: 1px solid #545454;
+      margin: 16px 0;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #545454;
+    }
+
+    .info-table th {
+      background-color: #f9fafb;
+      text-align: left;
+      padding: 12px 12px;
+      font-weight: 400;
+      color: #444444;
+      border-bottom: 1px solid #eee;
+      width: 30%;
+    }
+
+    .info-table td {
+      background-color: #fff;
+      padding: 12px 12px;
+      border-bottom: 1px solid #eee;
+      line-height: 1.5;
+    }
+
+    .info-table .bold-text {
+      font-weight: 700;
+    }
+
+    .info-table .small-text {
+      font-size: 12px;
+      color: #777;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin: 16px 0 24px;
+    }
+
+    .footer a {
+      color: #03c75a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .button {
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      background-color: #03c75a;
+      color: white;
+      text-align: center;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .button:hover {
+      background-color: #02b652;
+    }
+
+    @media (max-width: 320px) {
+      .button {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div style="display: flex; justify-content: flex-end; margin-top: 0px;" ><img src="./naver_logo.png" style="width: 100px;" /></div>
+    <div class="header">
+      <img src="./logo.png" alt="국새 마크" />
+      <div>
+        <div class="header-title">5월 신고 납부기한 통지서가 도착했어요.</div>
+        <div class="header-sub">김네모 님, 지금 확인해 보세요.</div>
+      </div>
+    </div>
+
+
+    <table class="info-table">
+      <tr>
+        <th>발송기관</th>
+        <td><b>국세청</b></td>
+      </tr>
+      <tr>
+        <th>전자문서 종류</th>
+        <td><b>5월 신고 납부기한 통지서</b></td>
+      </tr>
+      <tr>
+        <th>인증기한</th>
+        <td>
+          <span class="bold-text">2025-06-30 23:59 까지</span>
+          <span class="small-text">
+            기한 내 열람하지 않으면 발송기관 정책에 따라 다른 수단(종이우편, SMS/LMS 등) 또는 다른 채널(타사앱)로 발송됩니다.
+          </span>
+        </td>
+      </tr>
+      <tr></tr>
+    </table>
+
+    <!-- table 아래 hr 추가 -->
+
+    <div class="footer">
+      기관에서 정식 발송된 문서는 <br><a href="#">네이버앱 &gt; Na. &gt; 전자문서</a>에 표시됩니다.
+    </div>
+
+    <a href="#" class="button">확인하러 가기</a>
+  </div>
+
+</body>
+</html>
