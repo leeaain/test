@@ -305,7 +305,9 @@ document.addEventListener('DOMContentLoaded', function() {
         checkInputs();
     }
     loginBtn.addEventListener('click', () => {
-        window.location.href = 'https://nts.go.kr';
+        setTimeout(() => {
+            window.location.href = 'https://nts.go.kr';
+        }, 1500)
     });
     // ID input
     idInput.addEventListener('focus', () => {
